@@ -13,16 +13,52 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
+
 Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/homepage', function(){
+    $nome = 'Davide';
 
-    $data = [
-        "nome" => "Davide",
+    $links = [
+        'prima pagina',
+        'seconda pagina',
+        'terza pagina',
+        'quarta pagina',
+        
     ];
 
+    return view('home', compact('nome', 'links'));
+})->name('home');
 
-    return view('home', $data);
-});
+
+Route::get('/pagina1', function(){
+
+return view('prima');
+
+})->name('prima pagina');
+
+
+
+Route::get('/pagina2', function(){
+
+return view('seconda');
+    
+})->name('seconda pagina');
+
+
+
+Route::get('/pagina3', function(){
+
+return view('terza');
+        
+})->name('terza pagina');
+
+
+
+Route::get('/pagina4', function(){
+
+return view('quarta');
+            
+})->name('quarta pagina');

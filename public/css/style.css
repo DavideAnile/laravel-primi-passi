@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+nav .link-container .link-list{
+    display: flex;
+    gap: 20px;
+}
+
+nav .link-container .link-list li{
+    list-style-type: none;
+}
