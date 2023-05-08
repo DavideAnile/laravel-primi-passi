@@ -22,43 +22,44 @@ Route::get('/', function () {
     $nome = 'Davide';
 
     $links = [
-        'prima pagina',
-        'seconda pagina',
-        'terza pagina',
-        'quarta pagina',
+        'prima_pagina',
+        'seconda_pagina',
+        'terza_pagina',
+        'quarta_pagina',
         
     ];
 
     return view('home', compact('nome', 'links'));
 })->name('home');
+    
 
 
 Route::get('/pagina1', function(){
 
-return view('prima');
+    return view('prima');
+})->name('prima_pagina');
 
-})->name('prima pagina');
 
 
 
 Route::get('/pagina2', function(){
 
-return view('seconda');
+    return view('seconda');
+})->name('seconda_pagina');
     
-})->name('seconda pagina');
 
 
 
 Route::get('/pagina3', function(){
 
-return view('terza');
+    return view('terza');
+})->name('terza_pagina');
         
-})->name('terza pagina');
 
 
 
 Route::get('/pagina4', function(){
 
-return view('quarta');
+    return view('quarta');
+})->name('quarta_pagina');
             
-})->name('quarta pagina');
